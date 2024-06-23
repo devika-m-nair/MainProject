@@ -58,11 +58,11 @@ public class PageUtilities {
 	    public static boolean isAnElementSelected(WebElement element) {
 	        return(element.isSelected());
 	    }
-	    public static void clickAnElement(WebDriver driver,WebElement element) {
+	    public static void clickAnElementUsingJavaScriptExe(WebDriver driver,WebElement element) {
 	        JavascriptExecutor executor = (JavascriptExecutor)driver;
 	        executor.executeScript("arguments[0].click();", element);
 	    }
-	    public static void scrollThePage(WebDriver driver,WebElement element) {
+	    public static void scrollThePageUsingJavaScriptExe(WebDriver driver,WebElement element) {
 	        JavascriptExecutor executor = (JavascriptExecutor)driver;
 	        executor.executeScript("window.scrollBy(0,1000)", element);
 	    }
