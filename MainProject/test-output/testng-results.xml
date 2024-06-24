@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-23T17:15:05 IST" name="Suite" finished-at="2024-06-23T17:15:39 IST" duration-ms="33801">
+  <suite started-at="2024-06-24T20:24:33 IST" name="Suite" finished-at="2024-06-24T20:25:01 IST" duration-ms="28266">
     <groups>
     </groups>
-    <test started-at="2024-06-23T17:15:05 IST" name="Test" finished-at="2024-06-23T17:15:39 IST" duration-ms="33801">
+    <test started-at="2024-06-24T20:24:33 IST" name="Test" finished-at="2024-06-24T20:25:01 IST" duration-ms="28266">
       <class name="TestCases.QaLegend_TestCases">
-        <test-method is-config="true" signature="intialization()[pri:0, instance:TestCases.QaLegend_TestCases@2e3967ea]" started-at="2024-06-23T17:15:05 IST" name="intialization" finished-at="2024-06-23T17:15:23 IST" duration-ms="17408" status="PASS">
+        <test-method is-config="true" signature="intialization()[pri:0, instance:TestCases.QaLegend_TestCases@70e9c95d]" started-at="2024-06-24T20:24:33 IST" name="intialization" finished-at="2024-06-24T20:24:41 IST" duration-ms="8000" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intialization -->
-        <test-method signature="forgotPasswordVerification()[pri:0, instance:TestCases.QaLegend_TestCases@2e3967ea]" started-at="2024-06-23T17:15:23 IST" name="forgotPasswordVerification" finished-at="2024-06-23T17:15:25 IST" duration-ms="1969" status="PASS">
+        <test-method signature="addEditNotes()[pri:0, instance:TestCases.QaLegend_TestCases@70e9c95d]" started-at="2024-06-24T20:24:41 IST" name="addEditNotes" finished-at="2024-06-24T20:24:45 IST" duration-ms="3581" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEditNotes -->
+        <test-method is-config="true" signature="intialization()[pri:0, instance:TestCases.QaLegend_TestCases@70e9c95d]" started-at="2024-06-24T20:24:45 IST" name="intialization" finished-at="2024-06-24T20:24:51 IST" duration-ms="6375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intialization -->
+        <test-method signature="forgotPasswordVerification()[pri:0, instance:TestCases.QaLegend_TestCases@70e9c95d]" started-at="2024-06-24T20:24:51 IST" name="forgotPasswordVerification" finished-at="2024-06-24T20:24:52 IST" duration-ms="1528" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotPasswordVerification -->
-        <test-method is-config="true" signature="intialization()[pri:0, instance:TestCases.QaLegend_TestCases@2e3967ea]" started-at="2024-06-23T17:15:25 IST" name="intialization" finished-at="2024-06-23T17:15:33 IST" duration-ms="7987" status="PASS">
+        <test-method is-config="true" signature="intialization()[pri:0, instance:TestCases.QaLegend_TestCases@70e9c95d]" started-at="2024-06-24T20:24:53 IST" name="intialization" finished-at="2024-06-24T20:24:59 IST" duration-ms="6713" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intialization -->
-        <test-method signature="loginToQaLegendApp()[pri:0, instance:TestCases.QaLegend_TestCases@2e3967ea]" started-at="2024-06-23T17:15:33 IST" name="loginToQaLegendApp" finished-at="2024-06-23T17:15:39 IST" duration-ms="6150" status="PASS">
+        <test-method signature="loginToQaLegendApp()[pri:0, instance:TestCases.QaLegend_TestCases@70e9c95d]" started-at="2024-06-24T20:24:59 IST" name="loginToQaLegendApp" finished-at="2024-06-24T20:25:01 IST" duration-ms="1910" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToQaLegendApp -->
