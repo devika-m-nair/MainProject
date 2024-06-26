@@ -29,11 +29,15 @@ public class QaLegendForgotPassword {
 
 
 
-	public void forgotPasswordSuccessVerification(String emailforg) {
+	public void forgotPasswordVerification(String emailforg) {
 		PageUtilities.clickOnElement(forgotpasswordlink);
 		PageUtilities.enterText(forgotemail, emailforg);
 		PageUtilities.clickOnElement(sendforgotmail);
-		PageUtilities.isElementDisplayed(forgotsuccessalert);
+	}
+	
+	public String getSuccessMessage() {
+		String forgotpasssuccessmessage = PageUtilities.getElementText(forgotsuccessalert);
+		return forgotpasssuccessmessage;
 	}
 	
 
