@@ -6,7 +6,7 @@
       <class name="TestCases.QaLegend_TestCases">
         <methods>
           <include name="intialization"/>
-          <include name="sendAMessage"/>
+          <include name="forgotPasswordVerification"/>
         </methods>
       </class> <!-- TestCases.QaLegend_TestCases -->
     </classes>

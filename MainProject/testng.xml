@@ -5,9 +5,11 @@
     <classes>
       <class name="TestCases.QaLegend_TestCases"/>
       <methods>
-		<include name="sendAMessage"></include>
+		
+		<!--<include name="loginToQaLegendApp"></include>-->
 		<!--<include name="forgotPasswordVerification"></include>-->
-		<!--<include name="addEditNotes"></include>-->
+		<include name="addEditNotes"></include>
+		<!--<include name="sendAMessage"></include>-->
 	  </methods>
     </classes>
   </test> <!-- Test -->

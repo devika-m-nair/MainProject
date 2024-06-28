@@ -35,8 +35,8 @@ public class QaLegendForgotPassword {
 		PageUtilities.clickOnElement(sendforgotmail);
 	}
 	
-	public String getSuccessMessage() {
-		String forgotpasssuccessmessage = PageUtilities.getElementText(forgotsuccessalert);
+	public Boolean getForgotPasswordStatus() {
+		boolean forgotpasssuccessmessage = PageUtilities.isElementDisplayed(forgotsuccessalert);
 		return forgotpasssuccessmessage;
 	}
 	

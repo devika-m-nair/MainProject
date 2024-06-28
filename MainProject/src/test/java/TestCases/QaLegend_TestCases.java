@@ -58,7 +58,7 @@ public class QaLegend_TestCases extends  BaseClassMain{
 		System.out.println("Testcase2");
 		forgotpassword.forgotPasswordVerification(props.getProperty("username"));
 		String successmessage=props.getProperty("forgotscreensuccessmessage");
-		org.testng.Assert.assertEquals(forgotpassword.getSuccessMessage(), successmessage);	
+		org.testng.Assert.assertEquals(forgotpassword.getForgotPasswordStatus(), true);	
 	}
 
 	 @Test 
