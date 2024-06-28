@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import AutomationCore.BaseClassMain;
+import PageClasses.QaLegendClientPage;
 import PageClasses.QaLegendDashboard;
 import PageClasses.QaLegendForgotPassword;
 import PageClasses.QaLegendLoginPage;
@@ -27,6 +28,7 @@ public class QaLegend_TestCases extends  BaseClassMain{
 	QaLegendDashboard dashboard;
 	QaLegendNotesPage notes;
 	QaLegendMessagePage message;
+	QaLegendClientPage clientspage;
 	Random rand;
 	@BeforeMethod  
 	public void intialization() throws Exception
@@ -37,6 +39,7 @@ public class QaLegend_TestCases extends  BaseClassMain{
 		dashboard = new QaLegendDashboard(driver);
 		notes = new QaLegendNotesPage(driver);
 		message = new QaLegendMessagePage(driver);
+		clientspage = new QaLegendClientPage(driver);
 		rand = new Random();
 		driver.manage().window().maximize();
 		props=new Properties();
@@ -82,6 +85,17 @@ public class QaLegend_TestCases extends  BaseClassMain{
 		 message.searchForSendMessage(messagesub);
 		 org.testng.Assert.assertEquals(message.getSendMessage(), messagesub);
 	 }
+	 @Test
+	 public void clientCreation() {
+		 System.out.println("TestCase5");
+		 loginpage.loginToQaLegend(props.getProperty("username"),props.getProperty("password"));
+		 dashboard.clickOnClientMenu();
+		 String nameclientcomapany=props.getProperty("clientcompanyname")+rand.nextInt(10000);
+		 clientspage.createAClient(nameclientcomapany);
+		 clientspage.searchClient(nameclientcomapany);
+		 org.testng.Assert.assertEquals(clientspage.getClientCompany(), nameclientcomapany);
+	 }
 	 
 
 }
+
