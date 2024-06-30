@@ -53,8 +53,7 @@ public class QaLegendMessagePage {
 		PageUtilities.enterText(messagesubject, subject);
 		PageUtilities.enterText(messagedescription, decriptionmessage);
 		PageUtilities.clickOnElement(sendmessage);
-	}
-		
+	} 
 	
 	public void searchForSendMessage(String sub) {
 		PageUtilities.clickOnElement(senditemsmenu);

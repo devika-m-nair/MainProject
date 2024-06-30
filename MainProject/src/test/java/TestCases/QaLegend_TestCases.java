@@ -1,6 +1,9 @@
 package TestCases;
 
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
+
 import java.io.FileReader;
 import java.util.Properties;
 import java.util.Random;
@@ -13,9 +16,11 @@ import AutomationCore.BaseClassMain;
 import PageClasses.QaLegendClientPage;
 import PageClasses.QaLegendDashboard;
 import PageClasses.QaLegendForgotPassword;
+import PageClasses.QaLegendItemsPage;
 import PageClasses.QaLegendLoginPage;
 import PageClasses.QaLegendMessagePage;
 import PageClasses.QaLegendNotesPage;
+import PageClasses.QaLegendProjectsPage;
 import dev.failsafe.internal.util.Assert;
 
 public class QaLegend_TestCases extends  BaseClassMain{
@@ -29,6 +34,8 @@ public class QaLegend_TestCases extends  BaseClassMain{
 	QaLegendNotesPage notes;
 	QaLegendMessagePage message;
 	QaLegendClientPage clientspage;
+	QaLegendProjectsPage projectpage;
+	QaLegendItemsPage itemspage;
 	Random rand;
 	@BeforeMethod  
 	public void intialization() throws Exception
@@ -40,6 +47,8 @@ public class QaLegend_TestCases extends  BaseClassMain{
 		notes = new QaLegendNotesPage(driver);
 		message = new QaLegendMessagePage(driver);
 		clientspage = new QaLegendClientPage(driver);
+		projectpage = new QaLegendProjectsPage(driver);
+		itemspage = new QaLegendItemsPage(driver);
 		rand = new Random();
 		driver.manage().window().maximize();
 		props=new Properties();
@@ -94,6 +103,29 @@ public class QaLegend_TestCases extends  BaseClassMain{
 		 clientspage.createAClient(nameclientcomapany);
 		 clientspage.searchClient(nameclientcomapany);
 		 org.testng.Assert.assertEquals(clientspage.getClientCompany(), nameclientcomapany);
+	 }
+	 @Test
+	 public void addAllProject() {
+		 System.out.println("TestCase6");
+		 loginpage.loginToQaLegend(props.getProperty("username"),props.getProperty("password"));
+		 dashboard.clickOnAllProjectsSubMenu();
+		 String titleofproject=props.getProperty("projecttitle")+rand.nextInt(10000);
+		 projectpage.addAProject(titleofproject, props.getProperty("projectclientname"));
+		 projectpage.searchProjectCreate(titleofproject);
+		 assertEquals(projectpage.getCreatedProject(), titleofproject);
+	 }
+	 @Test
+	 public void addAndDeleteAnItem() {
+		 System.out.println("TestCase7");
+		 loginpage.loginToQaLegend(props.getProperty("username"),props.getProperty("password"));
+		 dashboard.clickOnItemsMenu();
+		 String itemtitle = props.getProperty("titleofitem")+rand.nextInt(10000);
+		 itemspage.createAnItem(itemtitle, props.getProperty("rateofitem"));
+		 itemspage.searchForItemAdded(itemtitle);
+		 assertEquals(itemspage.getItemCreated(), itemtitle);
+		 itemspage.deleteItem();
+		 String nofoundmessage=props.getProperty("searchnonexistingitem");
+		 assertEquals(itemspage.searchForDeletedItem(), nofoundmessage);
 	 }
 	 
 

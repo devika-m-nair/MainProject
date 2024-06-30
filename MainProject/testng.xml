@@ -10,7 +10,9 @@
 		<!--<include name="forgotPasswordVerification"></include>-->
 		<!--<include name="addEditNotes"></include>-->
 		<!--<include name="sendAMessage"></include>-->
-		<include name="clientCreation"></include>
+		<!--<include name="clientCreation"></include>-->
+		<!--<include name="addAllProject"></include>-->
+		<include name="addAndDeleteAnItem"></include>
 	  </methods>
     </classes>
   </test> <!-- Test -->

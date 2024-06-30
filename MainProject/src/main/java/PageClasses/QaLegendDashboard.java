@@ -21,7 +21,10 @@ public class QaLegendDashboard {
 	WebElement clientsmenu;
 	@FindBy(xpath = "//span[text()='Projects']")
 	WebElement projectsmenu;
-	
+	@FindBy(xpath = "//span[text()='All Projects']")
+	WebElement allprojectssubmenu;
+	@FindBy(xpath = "//span[text()='Items']")
+	WebElement itemsmenu;
 	
 	public QaLegendDashboard(WebDriver driver) {
 		this.driver=driver;
@@ -38,6 +41,13 @@ public class QaLegendDashboard {
 	}
 	public void clickOnClientMenu() {
 		PageUtilities.clickOnElement(clientsmenu);
+	}
+	public void clickOnAllProjectsSubMenu() {
+		PageUtilities.clickOnElement(projectsmenu);
+		PageUtilities.clickOnElement(allprojectssubmenu);
+	}
+	public void clickOnItemsMenu() {
+		PageUtilities.clickOnElement(itemsmenu);
 	}
 
 }
