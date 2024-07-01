@@ -25,6 +25,8 @@ public class QaLegendDashboard {
 	WebElement allprojectssubmenu;
 	@FindBy(xpath = "//span[text()='Items']")
 	WebElement itemsmenu;
+	@FindBy(xpath = "//span[text()='Invoices']")
+	WebElement invoicemenu;
 	
 	public QaLegendDashboard(WebDriver driver) {
 		this.driver=driver;
@@ -48,6 +50,9 @@ public class QaLegendDashboard {
 	}
 	public void clickOnItemsMenu() {
 		PageUtilities.clickOnElement(itemsmenu);
+	}
+	public void clickOnInvoiceMenu() {
+		PageUtilities.clickOnElement(invoicemenu);
 	}
 
 }

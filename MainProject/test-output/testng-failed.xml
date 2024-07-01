@@ -6,7 +6,7 @@
       <class name="TestCases.QaLegend_TestCases">
         <methods>
           <include name="intialization"/>
-          <include name="addAnItem"/>
+          <include name="addInvoice"/>
         </methods>
       </class> <!-- TestCases.QaLegend_TestCases -->
     </classes>

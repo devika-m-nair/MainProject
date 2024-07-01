@@ -16,6 +16,7 @@ import AutomationCore.BaseClassMain;
 import PageClasses.QaLegendClientPage;
 import PageClasses.QaLegendDashboard;
 import PageClasses.QaLegendForgotPassword;
+import PageClasses.QaLegendInvoicePage;
 import PageClasses.QaLegendItemsPage;
 import PageClasses.QaLegendLoginPage;
 import PageClasses.QaLegendMessagePage;
@@ -36,6 +37,7 @@ public class QaLegend_TestCases extends  BaseClassMain{
 	QaLegendClientPage clientspage;
 	QaLegendProjectsPage projectpage;
 	QaLegendItemsPage itemspage;
+	QaLegendInvoicePage invoicepage;
 	Random rand;
 	@BeforeMethod  
 	public void intialization() throws Exception
@@ -49,6 +51,7 @@ public class QaLegend_TestCases extends  BaseClassMain{
 		clientspage = new QaLegendClientPage(driver);
 		projectpage = new QaLegendProjectsPage(driver);
 		itemspage = new QaLegendItemsPage(driver);
+		invoicepage = new QaLegendInvoicePage(driver);
 		rand = new Random();
 		driver.manage().window().maximize();
 		props=new Properties();
@@ -126,6 +129,19 @@ public class QaLegend_TestCases extends  BaseClassMain{
 		 itemspage.deleteItem();
 		 String nofoundmessage=props.getProperty("searchnonexistingitem");
 		 assertEquals(itemspage.searchForDeletedItem(), nofoundmessage);
+	 }
+	 @Test
+	 public void addInvoice() {
+		 System.out.println("TestCase8");
+		 loginpage.loginToQaLegend(props.getProperty("username"),props.getProperty("password"));
+		 dashboard.clickOnInvoiceMenu();
+		 invoicepage.createAnInvoice(props.getProperty("invoiceduedate"), props.getProperty("invoiceclientname"));
+		 String invoideid=invoicepage.getInvoiceId();
+		 System.out.println(invoideid);
+		 invoicepage.addPayment(props.getProperty("invoicepaymentdate"), props.getProperty("invoicepaymentamount"));
+		 String invoicestatus=invoicepage.getInvoiceStatus();
+		 System.out.println(invoicestatus);
+		 //doubt
 	 }
 	 
 

@@ -12,7 +12,8 @@
 		<!--<include name="sendAMessage"></include>-->
 		<!--<include name="clientCreation"></include>-->
 		<!--<include name="addAllProject"></include>-->
-		<include name="addAndDeleteAnItem"></include>
+		<!--<include name="addAndDeleteAnItem"></include>-->
+		<include name="addInvoice"></include>
 	  </methods>
     </classes>
   </test> <!-- Test -->
