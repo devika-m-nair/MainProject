@@ -131,7 +131,7 @@ public class QaLegend_TestCases extends  BaseClassMain{
 		 assertEquals(itemspage.searchForDeletedItem(), nofoundmessage);
 	 }
 	 @Test
-	 public void addInvoice() {
+	 public void addInvoice() throws InterruptedException {
 		 System.out.println("TestCase8");
 		 loginpage.loginToQaLegend(props.getProperty("username"),props.getProperty("password"));
 		 dashboard.clickOnInvoiceMenu();
@@ -139,9 +139,9 @@ public class QaLegend_TestCases extends  BaseClassMain{
 		 String invoideid=invoicepage.getInvoiceId();
 		 System.out.println(invoideid);
 		 invoicepage.addPayment(props.getProperty("invoicepaymentdate"), props.getProperty("invoicepaymentamount"));
-		 String invoicestatus=invoicepage.getInvoiceStatus();
+		 String invoicestatus=invoicepage.getInvoiceStatus(driver);
 		 System.out.println(invoicestatus);
-		 //doubt
+		 //doubt 
 	 }
 	 
 

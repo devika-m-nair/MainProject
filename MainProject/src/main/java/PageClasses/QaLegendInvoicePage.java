@@ -4,8 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Utilities.PageUtilities;
+import Utilities.WaitUtility;
 
 public class QaLegendInvoicePage {
 	WebDriver driver;
@@ -62,7 +64,8 @@ public void addPayment(String invoicepaymentdatedata,String paymentamountofinvoi
 	PageUtilities.enterText(invoicepaymentamount, paymentamountofinvoice);
 	PageUtilities.clickOnElement(saveinvoice);
 }
-public String getInvoiceStatus() {
+public String getInvoiceStatus(WebDriver driver) throws InterruptedException {
+	WaitUtility.waitForElementTextToBe(driver, invoicestatus, "Fully paid");
 	String invoicestatusgenerated=PageUtilities.getElementText(invoicestatus);
 	return invoicestatusgenerated;
 }

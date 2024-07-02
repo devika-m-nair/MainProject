@@ -30,22 +30,10 @@ public class QaLegendMessagePage {
 	WebElement searchsendmessage;
 	@FindBy(xpath = "(//div[@class='pull-left message-row ']//div)[3]")
 	WebElement messagesent;
-	
-	
-	
-	
-	
-	
 	public QaLegendMessagePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-
-
-
-
-
-
 	public void enterAndSendMessage(String senduser,String subject,String decriptionmessage) {
 		PageUtilities.clickOnElement(composebutton);
 		PageUtilities.clickOnElement(tosend);
@@ -65,19 +53,4 @@ public class QaLegendMessagePage {
 		String getmessage=PageUtilities.getElementText(messagesent);
 		return getmessage;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }
