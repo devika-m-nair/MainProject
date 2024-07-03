@@ -22,6 +22,8 @@ import PageClasses.QaLegendLoginPage;
 import PageClasses.QaLegendMessagePage;
 import PageClasses.QaLegendNotesPage;
 import PageClasses.QaLegendProjectsPage;
+import PageClasses.QaLegendTeamMembersPage;
+import PageClasses.QaLegendTicketsPage;
 import dev.failsafe.internal.util.Assert;
 
 public class QaLegend_TestCases extends  BaseClassMain{
@@ -38,6 +40,8 @@ public class QaLegend_TestCases extends  BaseClassMain{
 	QaLegendProjectsPage projectpage;
 	QaLegendItemsPage itemspage;
 	QaLegendInvoicePage invoicepage;
+	QaLegendTicketsPage ticketspage;
+	QaLegendTeamMembersPage teammemberspage;
 	Random rand;
 	@BeforeMethod  
 	public void intialization() throws Exception
@@ -52,6 +56,8 @@ public class QaLegend_TestCases extends  BaseClassMain{
 		projectpage = new QaLegendProjectsPage(driver);
 		itemspage = new QaLegendItemsPage(driver);
 		invoicepage = new QaLegendInvoicePage(driver);
+		ticketspage =  new QaLegendTicketsPage(driver);
+		teammemberspage = new QaLegendTeamMembersPage(driver);
 		rand = new Random();
 		driver.manage().window().maximize();
 		props=new Properties();
@@ -143,7 +149,29 @@ public class QaLegend_TestCases extends  BaseClassMain{
 		 System.out.println(invoicestatus);
 		 //doubt 
 	 }
-	 
-
+	 @Test
+	 public void addATicketAndUpdateStatus() {
+		 loginpage.loginToQaLegend(props.getProperty("username"),props.getProperty("password"));
+		 dashboard.clickOnTicketsMenu();
+		 String tickettittle=props.getProperty("tickettitle")+rand.nextInt(10000);
+		 ticketspage.addATicket(tickettittle, props.getProperty("ticketclientname"), driver, props.getProperty("ticketdescription"));
+		 ticketspage.changeTheStatus(tickettittle);
+		 assertEquals(ticketspage.getStatusOfTicket(), "Closed");
+	 }
+	 @Test
+	 public void addATeamMember() throws InterruptedException {
+		 loginpage.loginToQaLegend(props.getProperty("username"),props.getProperty("password"));
+		 dashboard.clickOnTeamMembersMenu();
+		 String memberfirstname=props.getProperty("membersfirstname")+rand.nextInt(10000);
+		 String memberslastname=props.getProperty("memberslastname")+rand.nextInt(10000);
+		 String membersjobtitle=props.getProperty("memberjobtitle")+rand.nextInt(10000);
+		 String membersemailid=props.getProperty("memberemaillocal")+rand.nextInt(10000)+props.getProperty("memberemaildomain");
+		 System.out.println(membersemailid);
+		 String memberspassword=props.getProperty("memberpassword");
+		 teammemberspage.createATeamMember(memberfirstname, memberslastname, membersjobtitle, membersemailid, memberspassword);
+		 teammemberspage.searchForTeamMember(driver,membersemailid);
+		 assertEquals(teammemberspage.getMemberEmailId(), membersemailid);
+		 
+	 }
 }
 

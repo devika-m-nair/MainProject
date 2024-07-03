@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.QaLegend_TestCases" class="method navigator-link" hash-for-method="addInvoice">addInvoice</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="TestCases.QaLegend_TestCases" class="method navigator-link" hash-for-method="addATeamMember">addATeamMember</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -126,9 +126,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addInvoice">
-                  </a> <!-- addInvoice -->
-                  <span class="method-name">addInvoice</span>
+                  <a name="addATeamMember">
+                  </a> <!-- addATeamMember -->
+                  <span class="method-name">addATeamMember</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -143,11 +143,14 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;TestCases.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestCases.QaLegend_TestCases&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;addInvoice&quot;/&gt;
+          &lt;include name=&quot;addATeamMember&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- TestCases.QaLegend_TestCases --&gt;
     &lt;/classes&gt;
@@ -191,14 +194,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'addInvoice')
+data.setCell(0, 1, 'addATeamMember')
 data.setCell(0, 2, 'TestCases.QaLegend_TestCases')
-data.setCell(0, 3, 14261);
+data.setCell(0, 3, 8375);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -213,7 +216,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">7 ignored methods</span>
+            <span class="header-content">9 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -221,9 +224,11 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">sendAMessage</span>
                 <br/>
+                <span class="ignored-method-name">forgotPasswordVerification</span>
+                <br/>
                 <span class="ignored-method-name">loginToQaLegendApp</span>
                 <br/>
-                <span class="ignored-method-name">addAllProject</span>
+                <span class="ignored-method-name">addATicketAndUpdateStatus</span>
                 <br/>
                 <span class="ignored-method-name">addAndDeleteAnItem</span>
                 <br/>
@@ -231,7 +236,9 @@ return data;
                 <br/>
                 <span class="ignored-method-name">addEditNotes</span>
                 <br/>
-                <span class="ignored-method-name">forgotPasswordVerification</span>
+                <span class="ignored-method-name">addAllProject</span>
+                <br/>
+                <span class="ignored-method-name">addInvoice</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -249,8 +256,8 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">addInvoice</span>
-                <span class="method-start">12277 ms</span>
+                <span class="method-name">addATeamMember</span>
+                <span class="method-start">8977 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

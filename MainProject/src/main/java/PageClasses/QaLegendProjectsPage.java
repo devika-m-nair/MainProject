@@ -21,7 +21,7 @@ public class QaLegendProjectsPage {
 	WebElement selectclient;
 	@FindBy(xpath = "//span[@class='fa fa-check-circle']")
 	WebElement saveallproject;
-	@FindBy(xpath = "//div[@id='project-table_filter']//input")
+	@FindBy(xpath = "//input[@type='search']")
 	WebElement projectsearch;
 	@FindBy(xpath = "(//table[@id='project-table']//a)[2]")
 	WebElement projectaddedtitle;
@@ -52,7 +52,6 @@ public void searchProjectCreate(String searchtitle) {
 public String getCreatedProject() {
 	String getprojecttitle=PageUtilities.getElementText(projectaddedtitle);
 	return getprojecttitle;
-	
 }
 }
 

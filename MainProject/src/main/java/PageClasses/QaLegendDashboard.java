@@ -27,6 +27,10 @@ public class QaLegendDashboard {
 	WebElement itemsmenu;
 	@FindBy(xpath = "//span[text()='Invoices']")
 	WebElement invoicemenu;
+	@FindBy(xpath = "//span[text()='Tickets']")
+	WebElement ticketsmenu;
+	@FindBy(xpath = "//span[text()='Team members']")
+	WebElement teammembersmenu;
 	
 	public QaLegendDashboard(WebDriver driver) {
 		this.driver=driver;
@@ -54,5 +58,10 @@ public class QaLegendDashboard {
 	public void clickOnInvoiceMenu() {
 		PageUtilities.clickOnElement(invoicemenu);
 	}
-
+	public void clickOnTicketsMenu() {
+		PageUtilities.clickOnElement(ticketsmenu);
+	}
+	public void clickOnTeamMembersMenu() {
+		PageUtilities.clickOnElement(teammembersmenu);
+	}
 }

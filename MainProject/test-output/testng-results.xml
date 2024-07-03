@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-02T07:41:08 IST" name="Suite" finished-at="2024-07-02T07:41:35 IST" duration-ms="26857">
+  <suite started-at="2024-07-03T20:37:30 IST" name="Suite" finished-at="2024-07-03T20:37:47 IST" duration-ms="17502">
     <groups>
     </groups>
-    <test started-at="2024-07-02T07:41:08 IST" name="Test" finished-at="2024-07-02T07:41:35 IST" duration-ms="26857">
+    <test started-at="2024-07-03T20:37:30 IST" name="Test" finished-at="2024-07-03T20:37:47 IST" duration-ms="17502">
       <class name="TestCases.QaLegend_TestCases">
-        <test-method is-config="true" signature="intialization()[pri:0, instance:TestCases.QaLegend_TestCases@7b36aa0c]" started-at="2024-07-02T07:41:09 IST" name="intialization" finished-at="2024-07-02T07:41:21 IST" duration-ms="12273" status="PASS">
+        <test-method is-config="true" signature="intialization()[pri:0, instance:TestCases.QaLegend_TestCases@135606db]" started-at="2024-07-03T20:37:30 IST" name="intialization" finished-at="2024-07-03T20:37:39 IST" duration-ms="8974" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intialization -->
-        <test-method signature="addInvoice()[pri:0, instance:TestCases.QaLegend_TestCases@7b36aa0c]" started-at="2024-07-02T07:41:21 IST" name="addInvoice" finished-at="2024-07-02T07:41:35 IST" duration-ms="14261" status="PASS">
+        <test-method signature="addATeamMember()[pri:0, instance:TestCases.QaLegend_TestCases@135606db]" started-at="2024-07-03T20:37:39 IST" name="addATeamMember" finished-at="2024-07-03T20:37:47 IST" duration-ms="8375" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addInvoice -->
+        </test-method> <!-- addATeamMember -->
       </class> <!-- TestCases.QaLegend_TestCases -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
