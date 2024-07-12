@@ -9,7 +9,7 @@
       <class name="TestCases.QaLegend_TestCases">
         <methods>
           <include name="intialization"/>
-          <include name="addATeamMember"/>
+          <include name="addTimeToTimeCard"/>
         </methods>
       </class> <!-- TestCases.QaLegend_TestCases -->
     </classes>

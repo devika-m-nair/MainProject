@@ -31,6 +31,18 @@ public class QaLegendDashboard {
 	WebElement ticketsmenu;
 	@FindBy(xpath = "//span[text()='Team members']")
 	WebElement teammembersmenu;
+	@FindBy(xpath = "//a[@id='user-dropdown-icon']")
+	WebElement profileicon;
+	@FindBy(xpath = "//span[text()='Estimates']")
+	WebElement estimatesmenu;
+	@FindBy(xpath = "//span[text()='Finance']")
+	WebElement financemenu;
+	@FindBy(xpath = "//span[text()='Payments']")
+	WebElement paymentmenu;
+	@FindBy(xpath = "//span[text()='Leave']")
+	WebElement leavemenu;
+	@FindBy(xpath = "//span[text()='Time cards']")
+	WebElement timecardsmenu;
 	
 	public QaLegendDashboard(WebDriver driver) {
 		this.driver=driver;
@@ -63,5 +75,25 @@ public class QaLegendDashboard {
 	}
 	public void clickOnTeamMembersMenu() {
 		PageUtilities.clickOnElement(teammembersmenu);
+	}
+	public void clickOnProfileIcon() {
+		PageUtilities.clickOnElement(profileicon);
+	}
+	public void clickOnEstimatesMenu() {
+		PageUtilities.clickOnElement(estimatesmenu);
+	}
+	public void clickOnPaymentMenu() {
+		PageUtilities.clickOnElement(financemenu);
+		PageUtilities.clickOnElement(paymentmenu);
+	}
+	public void clickOnEventMenu() {
+		PageUtilities.clickOnElement(eventsmenu);
+	}
+	public void clickOnLeaveMenu() {
+		PageUtilities.clickAnElementUsingJavaScriptExe(driver, leavemenu);
+		//PageUtilities.clickOnElement(leavemenu);
+	}
+	public void cLickOnTimecards() {
+		PageUtilities.clickAnElementUsingJavaScriptExe(driver, timecardsmenu);
 	}
 }

@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtilities;
+import Utilities.WaitUtility;
 
 public class QaLegendMessagePage {
 	WebDriver driver;
@@ -28,8 +29,10 @@ public class QaLegendMessagePage {
 	WebElement senditemsmenu;
 	@FindBy(xpath = "//input[@id='search-messages']")
 	WebElement searchsendmessage;
-	@FindBy(xpath = "(//div[@class='pull-left message-row ']//div)[3]")
-	WebElement messagesent;
+	@FindBy(xpath = "//div[@class='media-body']")
+	WebElement searchresult;
+	@FindBy(xpath = "(//div[@id='message-details-section']//p)[2]")
+	WebElement messagesentbody;
 	public QaLegendMessagePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -45,12 +48,15 @@ public class QaLegendMessagePage {
 	} 
 	
 	public void searchForSendMessage(String sub) {
+		WaitUtility.waitForElementToBeClickable(driver, senditemsmenu);
 		PageUtilities.clickOnElement(senditemsmenu);
 		PageUtilities.clickOnElement(searchsendmessage);
 		PageUtilities.enterText(searchsendmessage, sub);
+		PageUtilities.clickOnElement(searchresult);
+		
 	}
 	public String getSendMessage() {
-		String getmessage=PageUtilities.getElementText(messagesent);
+		String getmessage=PageUtilities.getElementText(messagesentbody);
 		return getmessage;
 	}
 }

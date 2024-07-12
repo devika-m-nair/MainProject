@@ -53,8 +53,8 @@ public class QaLegendTeamMembersPage {
 	}
 	public void searchForTeamMember(WebDriver driver,String memberemail) throws InterruptedException {
 		//WaitUtility.waitForAnElementToBeVisible(driver, teammembersearch);
-		//WaitUtility.waitForElementToBeClickable(driver, teammembersearch);
-		Thread.sleep(2000);
+		WaitUtility.waitForElementToBeClickable(driver, teammembersearch);
+		//Thread.sleep(2000);
 		PageUtilities.clickOnElement(teammembersearch);
 		PageUtilities.enterText(teammembersearch, memberemail);
 	}

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtilities;
+import Utilities.WaitUtility;
 
 public class QaLegendTicketsPage {
 	WebDriver driver;
@@ -53,6 +54,7 @@ public class QaLegendTicketsPage {
 		PageUtilities.clickOnElement(ticketsavebutton);
 	}
 	public void changeTheStatus(String titleticket) {
+		WaitUtility.waitForElementToBeClickable(driver, ticketlistingsearch);
 		PageUtilities.clickOnElement(ticketlistingsearch);
 		PageUtilities.enterText(ticketlistingsearch, titleticket);
 		PageUtilities.clickOnElement(statusupdatedropdown);

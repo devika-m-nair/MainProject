@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtilities;
+import Utilities.WaitUtility;
 
 public class QaLegendProjectsPage {
 	WebDriver driver;
@@ -45,6 +46,7 @@ public void addAProject(String titleofproject ,String clientname) {
 	PageUtilities.clickOnElement(saveallproject);
 }
 public void searchProjectCreate(String searchtitle) {
+	WaitUtility.waitForElementToBeClickable(driver, projectsearch);
 	PageUtilities.clickOnElement(projectsearch);
 	PageUtilities.enterText(projectsearch, searchtitle);
 	
