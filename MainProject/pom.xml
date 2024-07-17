@@ -49,8 +49,22 @@
         <version>2.6</version>
         </dependency>
         
-     
-
-
+       	<!-- https://mvnrepository.com/ -->
+	<dependency>
+	<groupId>org.apache.poi</groupId>
+	<artifactId>poi</artifactId>
+	<version>3.7</version>
+	</dependency>
+	<!-- https://mvnrepository.com/ -->
+	<dependency>
+	<groupId>org.apache.poi</groupId>
+	<artifactId>poi-ooxml</artifactId>
+	<version>3.7</version>
+	</dependency>
+	<dependency>
+		<groupId>automation_team</groupId>
+		<artifactId>Amazon</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
   </dependencies>
 </project>

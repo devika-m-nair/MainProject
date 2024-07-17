@@ -15,6 +15,8 @@ public class QaLegendLoginPage {
 	WebElement passwordfield;
 	@FindBy(xpath = "//button[text()='Sign in']")
 	WebElement signinbutton;
+	@FindBy(xpath = "//span[text()='Dashboard']")
+	WebElement dashboard;
 	
 	
 	
@@ -29,6 +31,11 @@ public class QaLegendLoginPage {
 		PageUtilities.enterText(usernamefield, username);
 		PageUtilities.enterText(passwordfield, password);
 		PageUtilities.clickOnElement(signinbutton);
+	}
+	
+	public String checkIfLoggedIn() {
+		String landingpagemenu =PageUtilities.getElementText(dashboard);
+		return landingpagemenu;
 	}
 	
 

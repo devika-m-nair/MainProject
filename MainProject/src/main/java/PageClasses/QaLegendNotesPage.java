@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtilities;
+import Utilities.WaitUtility;
 
 public class QaLegendNotesPage {
 	WebDriver driver;
@@ -42,6 +43,7 @@ public class QaLegendNotesPage {
 	}
 	
 	public void searchNotes(String title) {
+		WaitUtility.waitForElementToBeClickable(driver, notessearchbox);
 		PageUtilities.clickOnElement(notessearchbox);
 		PageUtilities.enterText(notessearchbox, title);
 	}

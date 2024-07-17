@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import Utilities.DateUtility;
 import Utilities.PageUtilities;
+import Utilities.WaitUtility;
 
 public class QaLegendLeavePage1 {
 	WebDriver driver;
@@ -30,7 +31,12 @@ public class QaLegendLeavePage1 {
 	WebElement leavereason;
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement leavesubmit;
-	
+	@FindBy(xpath = "//a[text()='Summary']")
+	WebElement summarytab;
+	@FindBy(xpath = "//div[@id='leave-summary-table_filter']//input")
+	WebElement summarysearch;
+	@FindBy(xpath = "//table[@id='leave-summary-table']//a")
+	WebElement searchresult;
 	
 	
 	public QaLegendLeavePage1(WebDriver driver) {
@@ -48,9 +54,19 @@ public class QaLegendLeavePage1 {
 		PageUtilities.clickOnElement(leavetypefield);
 		PageUtilities.enterText(leavetypesearch, leavetype);
 		PageUtilities.enterKeyPress(driver);
+		System.out.println(DateUtility.getCurrentDate());
 		PageUtilities.enterText(leavedate, DateUtility.getCurrentDate());
 		PageUtilities.enterText(leavereason, reason);
 		PageUtilities.clickOnElement(leavesubmit);
+		
+	}
+	public String verifyMemberAvailableInSummary(String assigniename) {
+		WaitUtility.waitForElementToBeClickable(driver, summarytab);
+		PageUtilities.clickOnElement(summarytab);
+		PageUtilities.enterText(summarysearch, assigniename);
+		String leaveassignedto=PageUtilities.getElementText(searchresult);
+		return leaveassignedto;
+		
 	}
 
 }

@@ -5,11 +5,13 @@
     <listener class-name="TestCases.Listeners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="TestCases.QaLegend_TestCases">
         <methods>
           <include name="intialization"/>
-          <include name="addTimeToTimeCard"/>
+          <include name="forgotPasswordVerification"/>
+          <include name="quitTheBrowser"/>
         </methods>
       </class> <!-- TestCases.QaLegend_TestCases -->
     </classes>

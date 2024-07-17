@@ -1,33 +1,298 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results retried="3" ignored="3" total="8" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-09T07:02:05 IST" name="Suite" finished-at="2024-07-09T07:02:34 IST" duration-ms="29275">
+  <suite started-at="2024-07-17T20:43:49 IST" name="Suite" finished-at="2024-07-17T20:44:34 IST" duration-ms="44759">
     <groups>
+      <group name="Regression Test">
+        <method signature="QaLegend_TestCases.loginToQaLegendApp()[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" name="loginToQaLegendApp" class="TestCases.QaLegend_TestCases"/>
+      </group> <!-- Regression Test -->
+      <group name="Re Test">
+        <method signature="QaLegend_TestCases.forgotPasswordVerification()[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" name="forgotPasswordVerification" class="TestCases.QaLegend_TestCases"/>
+      </group> <!-- Re Test -->
     </groups>
-    <test started-at="2024-07-09T07:02:05 IST" name="Test" finished-at="2024-07-09T07:02:34 IST" duration-ms="29275">
+    <test started-at="2024-07-17T20:43:49 IST" name="Test" finished-at="2024-07-17T20:44:34 IST" duration-ms="44759">
       <class name="TestCases.QaLegend_TestCases">
-        <test-method is-config="true" signature="intialization()[pri:0, instance:TestCases.QaLegend_TestCases@57ad2aa7]" started-at="2024-07-09T07:02:05 IST" name="intialization" finished-at="2024-07-09T07:02:12 IST" duration-ms="6694" status="PASS">
+        <test-method is-config="true" signature="intialization(java.lang.String)[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" started-at="2024-07-17T20:43:49 IST" name="intialization" finished-at="2024-07-17T20:43:59 IST" duration-ms="10125" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intialization -->
-        <test-method signature="assignLeave()[pri:0, instance:TestCases.QaLegend_TestCases@57ad2aa7]" started-at="2024-07-09T07:02:12 IST" name="assignLeave" finished-at="2024-07-09T07:02:19 IST" duration-ms="6711" status="PASS">
+        <test-method signature="loginToQaLegendApp()[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" started-at="2024-07-17T20:43:59 IST" name="loginToQaLegendApp" finished-at="2024-07-17T20:44:02 IST" duration-ms="2382" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- assignLeave -->
-        <test-method is-config="true" signature="quitTheBrowser()[pri:0, instance:TestCases.QaLegend_TestCases@57ad2aa7]" started-at="2024-07-09T07:02:19 IST" name="quitTheBrowser" finished-at="2024-07-09T07:02:19 IST" duration-ms="740" status="PASS">
+        </test-method> <!-- loginToQaLegendApp -->
+        <test-method is-config="true" signature="quitTheBrowser()[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" started-at="2024-07-17T20:44:02 IST" name="quitTheBrowser" finished-at="2024-07-17T20:44:03 IST" duration-ms="912" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitTheBrowser -->
-        <test-method is-config="true" signature="intialization()[pri:0, instance:TestCases.QaLegend_TestCases@57ad2aa7]" started-at="2024-07-09T07:02:19 IST" name="intialization" finished-at="2024-07-09T07:02:24 IST" duration-ms="4295" status="PASS">
+        <test-method is-config="true" signature="intialization(java.lang.String)[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" started-at="2024-07-17T20:44:03 IST" name="intialization" finished-at="2024-07-17T20:44:08 IST" duration-ms="5589" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intialization -->
-        <test-method signature="addTimeToTimeCard()[pri:0, instance:TestCases.QaLegend_TestCases@57ad2aa7]" started-at="2024-07-09T07:02:24 IST" name="addTimeToTimeCard" finished-at="2024-07-09T07:02:34 IST" duration-ms="10116" status="PASS">
+        <test-method retried="true" signature="forgotPasswordVerification()[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" started-at="2024-07-17T20:44:08 IST" name="forgotPasswordVerification" finished-at="2024-07-17T20:44:09 IST" duration-ms="864" status="SKIP">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy14.sendKeys(Unknown Source)
+at Utilities.PageUtilities.enterText(PageUtilities.java:15)
+at PageClasses.QaLegendForgotPassword.forgotPasswordVerification(QaLegendForgotPassword.java:34)
+at TestCases.QaLegend_TestCases.forgotPasswordVerification(QaLegend_TestCases.java:107)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addTimeToTimeCard -->
-        <test-method is-config="true" signature="quitTheBrowser()[pri:0, instance:TestCases.QaLegend_TestCases@57ad2aa7]" started-at="2024-07-09T07:02:34 IST" name="quitTheBrowser" finished-at="2024-07-09T07:02:34 IST" duration-ms="473" status="PASS">
+        </test-method> <!-- forgotPasswordVerification -->
+        <test-method is-config="true" signature="quitTheBrowser()[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" started-at="2024-07-17T20:44:09 IST" name="quitTheBrowser" finished-at="2024-07-17T20:44:10 IST" duration-ms="417" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitTheBrowser -->
+        <test-method is-config="true" signature="intialization(java.lang.String)[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" started-at="2024-07-17T20:44:10 IST" name="intialization" finished-at="2024-07-17T20:44:17 IST" duration-ms="7424" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intialization -->
+        <test-method retried="true" signature="forgotPasswordVerification()[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" started-at="2024-07-17T20:44:17 IST" name="forgotPasswordVerification" finished-at="2024-07-17T20:44:17 IST" duration-ms="511" status="SKIP">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy14.sendKeys(Unknown Source)
+at Utilities.PageUtilities.enterText(PageUtilities.java:15)
+at PageClasses.QaLegendForgotPassword.forgotPasswordVerification(QaLegendForgotPassword.java:34)
+at TestCases.QaLegend_TestCases.forgotPasswordVerification(QaLegend_TestCases.java:107)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotPasswordVerification -->
+        <test-method is-config="true" signature="quitTheBrowser()[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" started-at="2024-07-17T20:44:17 IST" name="quitTheBrowser" finished-at="2024-07-17T20:44:18 IST" duration-ms="347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitTheBrowser -->
+        <test-method is-config="true" signature="intialization(java.lang.String)[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" started-at="2024-07-17T20:44:18 IST" name="intialization" finished-at="2024-07-17T20:44:26 IST" duration-ms="7894" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intialization -->
+        <test-method retried="true" signature="forgotPasswordVerification()[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" started-at="2024-07-17T20:44:26 IST" name="forgotPasswordVerification" finished-at="2024-07-17T20:44:26 IST" duration-ms="638" status="SKIP">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy14.sendKeys(Unknown Source)
+at Utilities.PageUtilities.enterText(PageUtilities.java:15)
+at PageClasses.QaLegendForgotPassword.forgotPasswordVerification(QaLegendForgotPassword.java:34)
+at TestCases.QaLegend_TestCases.forgotPasswordVerification(QaLegend_TestCases.java:107)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotPasswordVerification -->
+        <test-method is-config="true" signature="quitTheBrowser()[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" started-at="2024-07-17T20:44:26 IST" name="quitTheBrowser" finished-at="2024-07-17T20:44:27 IST" duration-ms="599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitTheBrowser -->
+        <test-method is-config="true" signature="intialization(java.lang.String)[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" started-at="2024-07-17T20:44:27 IST" name="intialization" finished-at="2024-07-17T20:44:32 IST" duration-ms="5086" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intialization -->
+        <test-method signature="forgotPasswordVerification()[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" started-at="2024-07-17T20:44:32 IST" name="forgotPasswordVerification" finished-at="2024-07-17T20:44:33 IST" duration-ms="641" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy14.sendKeys(Unknown Source)
+at Utilities.PageUtilities.enterText(PageUtilities.java:15)
+at PageClasses.QaLegendForgotPassword.forgotPasswordVerification(QaLegendForgotPassword.java:34)
+at TestCases.QaLegend_TestCases.forgotPasswordVerification(QaLegend_TestCases.java:107)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotPasswordVerification -->
+        <test-method is-config="true" signature="quitTheBrowser()[pri:0, instance:TestCases.QaLegend_TestCases@5be49b60]" started-at="2024-07-17T20:44:33 IST" name="quitTheBrowser" finished-at="2024-07-17T20:44:34 IST" duration-ms="723" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitTheBrowser -->
