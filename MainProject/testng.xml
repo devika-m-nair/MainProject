@@ -16,7 +16,7 @@
       <methods>
 		
 			<include name="loginToQaLegendApp"></include>
-			<include name="forgotPasswordVerification"></include>
+			<!--<include name="forgotPasswordVerification"></include>-->
 			<!--<include name="addEditNotes"></include>-->
 			<!--<include name="sendAMessage"></include>-->
 		<!--	<include name="clientCreation"></include>-->

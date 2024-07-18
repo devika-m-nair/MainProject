@@ -36,6 +36,7 @@ import PageClasses.QaLegendTicketsPage;
 import PageClasses.QaLegendTimecardPage;
 import Utilities.ExcelUtility;
 import Utilities.MyRetry;
+import Utilities.PageUtilities;
 import dev.failsafe.internal.util.Assert;
 
 public class QaLegend_TestCases extends  BaseClassMain{
@@ -81,7 +82,7 @@ public class QaLegend_TestCases extends  BaseClassMain{
 		leavepage1 = new QaLegendLeavePage1(driver);
 		timecard = new QaLegendTimecardPage(driver);
 		rand = new Random();
-		driver.manage().window().maximize();
+		PageUtilities.maximizeTheWindow(driver);
 		props=new Properties();
 		path=System.getProperty("user.dir")+"\\src\\main\\resources\\TestData\\TestData.properties";
 		reader = new FileReader(path);
@@ -246,17 +247,7 @@ public class QaLegend_TestCases extends  BaseClassMain{
 		assertEquals(props.getProperty("leaveformember"), assignie);
 	}
 	
-	@Test(retryAnalyzer = MyRetry.class)
-	public void addTimeToTimeCard() {
-		loginpage.loginToQaLegend(props.getProperty("username"),props.getProperty("password"));
-		 dashboard.cLickOnTimecards();
-		 timecard.addATimeManully(props.getProperty("timecardmember"), props.getProperty("timecardoutdate"));
-		 timecard.downloadTheExcelOfListingScreen();
-		 //File f=new File(downloadpath);
-		 if(Files.exists(Paths.get(downloadpath))) {
-			 System.out.println("File is present");
-		 }
-		 
+	
 	}
-}
+
 

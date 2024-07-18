@@ -76,6 +76,9 @@ public class PageUtilities {
 	    	action.sendKeys(Keys.ENTER);
 	    	action.build().perform();
 	    }
+	    public static void maximizeTheWindow(WebDriver driver) {
+	    	driver.manage().window().maximize();
+	    }
 	    
 
 }
